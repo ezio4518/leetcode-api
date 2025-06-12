@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const API_BASE = "http://localhost:3000"; // or the deployed API URL
+const API_BASE = "https://leetcode-api-n845.onrender.com"; // or the deployed API URL
 
 const App = () => {
   const [username, setUsername] = useState("");
