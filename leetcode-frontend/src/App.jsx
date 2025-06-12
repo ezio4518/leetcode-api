@@ -11,7 +11,7 @@ const App = () => {
   const fetchAll = async () => {
     try {
       const endpoints = {
-        profile: `/userProfile/${username}`,
+        profile: `/${username}`,
         badges: `/${username}/badges`,
         solved: `/${username}/solved`,
         contest: `/${username}/contest`,
@@ -60,13 +60,13 @@ const App = () => {
         <>
           <h2>👤 Profile</h2>
           <img
-            src={data.profile.profile?.userAvatar}
+            src={data.profile?.avatar}
             alt="avatar"
             width={100}
           />
-          <p>Name: {data.profile.profile?.realName}</p>
-          <p>Ranking: {data.profile.profile?.ranking}</p>
-          <p>Country: {data.profile.profile?.countryName}</p>
+          <p>Name: {data.profile?.name}</p>
+          <p>Ranking: {data.profile?.ranking}</p>
+          <p>Country: {data.profile?.country}</p>
         </>
       )}
 
